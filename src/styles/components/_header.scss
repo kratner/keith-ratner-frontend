@@ -1,0 +1,99 @@
+// src/styles/components/_header.scss
+@use "../abstracts/variables" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: map-get($colors, background);
+  border-bottom: 1px solid map-get($colors, border);
+  z-index: 1000;
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+  }
+
+  &__logo {
+    h1 {
+      font-size: map-get($font-sizes, h4);
+      font-weight: map-get($font-weights, black);
+      margin: 0;
+      color: map-get($colors, primary);
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+    }
+
+    a {
+      color: map-get($colors, text);
+      text-decoration: none;
+      font-weight: map-get($font-weights, medium);
+      font-size: map-get($font-sizes, body);
+      padding: 0.5rem 0;
+      display: inline-block;
+      position: relative;
+      transition: color 0.2s ease;
+
+      // Underline effect
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: map-get($colors, primary);
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: map-get($colors, primary);
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      // Active state
+      &[href^="#"]:not([href="#"]) {
+        &.active,
+        &:active {
+          color: map-get($colors, primary);
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__nav li:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

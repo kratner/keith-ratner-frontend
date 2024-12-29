@@ -1,0 +1,14 @@
+// src/styles/base/_global.scss
+@use "../abstracts/variables" as *;
+
+.app {
+  min-height: 100vh;
+  background-color: map-get($colors, background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

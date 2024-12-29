@@ -1,0 +1,68 @@
+// src/styles/abstracts/_variables.scss
+
+// Font families
+$font-families: (
+  "display": (
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif,
+  ),
+  "heading": (
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif,
+  ),
+  "body": (
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif,
+  ),
+);
+
+// Font weights
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "black": 900,
+);
+
+// Font sizes
+$font-sizes: (
+  "display": 3.5rem,
+  // 56px - Hero titles
+  "h1": 3rem,
+  // 48px - Main section headers
+  "h2": 2.5rem,
+  // 40px - Section headers
+  "h3": 1.75rem,
+  // 28px - Subsection headers
+  "h4": 1.5rem,
+  // 24px - Card headers
+  "large": 1.25rem,
+  // 20px - Featured text
+  "body": 1rem,
+  // 16px - Body text
+  "small": 0.875rem // 14px - Small text,
+);
+
+// Colors
+$colors: (
+  "primary": #1a365d,
+  "primary-light": #2b6cb0,
+  "text": #4a5568,
+  "text-light": #718096,
+  "background": #ffffff,
+  "background-alt": #f8fafc,
+  "border": #e2e8f0,
+);

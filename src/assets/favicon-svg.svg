@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="favicon-svg.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.3935874"
+     inkscape:cx="8.4213643"
+     inkscape:cy="13.087255"
+     inkscape:window-width="1376"
+     inkscape:window-height="874"
+     inkscape:window-x="18"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <!-- Background -->
+  <rect
+     width="32"
+     height="32"
+     fill="#1a365d"
+     rx="4"
+     id="rect1" />
+  <!-- KR Letters -->
+  <g
+     fill="#ffffff"
+     id="g1"
+     transform="matrix(1.6426972,0,0,1.6426972,-6.0561462,-15.945623)">
+    <g
+       id="g3"
+       transform="matrix(0.78808728,0,0,0.78808728,1.2274,5.0723428)">
+      <text
+         style="font-weight:900;font-size:16px;font-family:Outfit;text-transform:uppercase;dominant-baseline:middle"
+         x="4.8480072"
+         y="20"
+         id="text3">K</text>
+      <text
+         style="font-weight:900;font-size:16px;font-family:Outfit;text-transform:uppercase;dominant-baseline:middle"
+         x="15.407981"
+         y="20"
+         id="text2">R</text>
+    </g>
+  </g>
+</svg>

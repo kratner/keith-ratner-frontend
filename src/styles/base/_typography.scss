@@ -1,0 +1,18 @@
+// src/styles/base/_typography.scss
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: map-get($font-families, body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: map-get($font-families, heading);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}

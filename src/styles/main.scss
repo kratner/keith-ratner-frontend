@@ -1,0 +1,13 @@
+/* src/styles/main.scss */
+
+/* Base styles */
+@use "abstracts/variables";
+@use "base/reset";
+@use "base/typography";
+@use "base/global";
+
+/* Components */
+@use "components/header";
+@use "components/hero";
+@use "components/services";
+@use "components/contact";

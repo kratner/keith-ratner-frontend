@@ -1,0 +1,64 @@
+// src/styles/components/_services.scss
+@use "../abstracts/variables" as *;
+
+.services {
+  padding: 5rem 1rem;
+  background-color: map-get($colors, background-alt);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    color: map-get($colors, primary);
+    font-size: map-get($font-sizes, h2);
+    font-weight: map-get($font-weights, bold);
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  &__item {
+    background-color: map-get($colors, background);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      color: map-get($colors, primary);
+      font-size: map-get($font-sizes, h4);
+      font-weight: map-get($font-weights, bold);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: map-get($colors, text);
+        font-weight: map-get($font-weights, regular);
+        padding: 0.5rem 0;
+        border-bottom: 1px solid map-get($colors, border);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

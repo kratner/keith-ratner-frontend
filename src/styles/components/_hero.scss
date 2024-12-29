@@ -1,0 +1,118 @@
+// src/styles/components/_hero.scss
+@use "../abstracts/variables" as *;
+
+.hero {
+  min-height: 100vh;
+  padding: 6rem 1rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    map-get($colors, background),
+    map-get($colors, background-alt)
+  );
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: map-get($font-sizes, display);
+    font-weight: map-get($font-weights, black);
+    color: map-get($colors, primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    @media (max-width: 768px) {
+      font-size: map-get($font-sizes, h1);
+    }
+  }
+
+  &__subtitle {
+    font-size: map-get($font-sizes, large);
+    font-weight: map-get($font-weights, regular);
+    color: map-get($colors, text);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: map-get($font-sizes, body);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    .hero__cta-secondary {
+      margin-left: 3rem; // Space between buttons
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+
+      .hero__cta-secondary {
+        margin-left: 0;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  &__cta-primary,
+  &__cta-secondary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    min-width: 180px;
+    text-align: center;
+    border-radius: 0.375rem;
+    font-weight: map-get($font-weights, semibold);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  &__cta-primary {
+    background-color: map-get($colors, primary);
+    color: white;
+
+    &:hover {
+      background-color: map-get($colors, primary-light);
+      transform: translateY(-1px);
+    }
+  }
+
+  &__cta-secondary {
+    border: 2px solid map-get($colors, primary);
+    color: map-get($colors, primary);
+
+    &:hover {
+      background-color: map-get($colors, primary);
+      color: white;
+      transform: translateY(-1px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 4rem 1rem;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__cta-primary,
+    &__cta-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
