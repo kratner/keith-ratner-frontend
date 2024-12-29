@@ -1,0 +1,12 @@
+// src/styles/components/_contact.scss
+@use "../abstracts/variables" as *;
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  background-color: map-get($colors, background-alt);
+  &__border {
+    padding: 10px;
+    background-color: map-get($colors, background);
+  }
+}

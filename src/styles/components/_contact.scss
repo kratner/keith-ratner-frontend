@@ -21,7 +21,6 @@
 
   &__methods {
     margin-bottom: 4rem; // Increased margin
-
     h3 {
       font-size: map-get($font-sizes, body);
       color: map-get($colors, text);
@@ -38,6 +37,10 @@
         color: map-get($colors, primary-light);
       }
     }
+  }
+
+  &__method {
+    padding: 20px;
   }
 
   &__profiles {
