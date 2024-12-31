@@ -2,6 +2,16 @@
 import type { FC } from "react";
 
 const Header: FC = () => {
+	// Function to determine the studio URL based on environment
+	const getStudioUrl = () => {
+		// If in development, use relative path
+		if (process.env.NODE_ENV === "development") {
+			return "/studio";
+		}
+		// In production (GitHub Pages), use the actual WordPress URL
+		return "https://keithratner.live/studio";
+	};
+
 	return (
 		<header className="header">
 			<div className="header__container">
@@ -17,7 +27,13 @@ const Header: FC = () => {
 							<a href="#contact">Contact</a>
 						</li>
 						<li>
-							<a href="/studio">Studio</a>
+							<a
+								href={getStudioUrl()}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Studio
+							</a>
 						</li>
 					</ul>
 				</nav>
