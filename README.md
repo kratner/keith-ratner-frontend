@@ -2,6 +2,8 @@
 
 Modern business landing page showcasing print and digital solution consulting services. Serves as primary digital presence with direct connection to printed materials via QR code.
 
+Live at https://kratner.github.io/keith-ratner-frontend
+
 ## Project Overview
 
 - React/TypeScript single-page application
