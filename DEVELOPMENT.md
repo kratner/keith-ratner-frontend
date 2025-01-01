@@ -1,89 +1,200 @@
 # Development Documentation
 
-## Technical Stack
+## Project Overview
 
-- React 18
-- TypeScript
-- SCSS Modules
-- WordPress (backend)
+React/TypeScript frontend for keithratner.live, integrated with WordPress multisite installation.
 
-## Component Structure
+## Architecture
 
-### Header
+### Frontend Structure
 
-- Fixed positioning
-- Navigation with smooth scroll
-- Mobile-responsive menu
+```
+src/
+├── components/
+│   ├── Header/           # Site navigation
+│   └── Sections/         # Main page sections
+│       ├── Hero/         # Landing section
+│       ├── Services/     # Services grid
+│       └── Contact/      # Contact information
+├── styles/               # SCSS modules
+│   ├── abstracts/        # Variables, mixins
+│   ├── base/            # Reset, typography
+│   └── components/      # Component styles
+└── types/               # TypeScript definitions
+```
 
-### Hero Section
+### Component Documentation
 
-- Full-height design
-- Main value proposition
+#### Header
+
+- Fixed position navigation
+- Smooth scroll navigation links
+- External link to WordPress site (/studio)
+- Mobile responsive
+
+#### Hero
+
+- Full-screen landing section
+- Primary value proposition
 - Call-to-action buttons
+- Responsive typography
 
-### Services Section
+#### Services
 
-- Grid layout
-- Four main service categories
-- Clean, scannable format
+- Four-column grid layout
+- Service categories
+- List-based content structure
+- Responsive grid system
 
-### Contact Section
+#### Contact
 
-- Contact information
+- Contact information display
 - Professional profile links
-- Location and availability
-- QR code integration
+- Location information
+- External link handling
 
-## Implementation Details
+### Styling System
 
-### Styles
+#### Variables
 
-SCSS modules with the following structure:
+```scss
+$colors: (
+  "primary": #1a365d,
+  "primary-light": #2b6cb0,
+  "text": #4a5568,
+  "text-light": #718096,
+  "background": #ffffff,
+  "background-alt": #f8fafc,
+  "border": #e2e8f0,
+);
 
-- abstracts: variables, mixins, functions
-- base: reset, typography, global styles
-- components: component-specific styles
+$font-families: (
+  "display": (
+    "Outfit",
+    -apple-system,
+    ...,
+  ),
+  "body": (
+    "Outfit",
+    -apple-system,
+    ...,
+  ),
+);
+```
 
-### Testing Strategy
+#### Typography
 
-1. Component Testing
+- Primary Font: Outfit (400, 500, 600, 700, 900)
+- Responsive scaling
+- Section-specific hierarchies
 
-   - Unit tests for each component
+### Testing
+
+#### Component Tests
+
+Each component has associated tests verifying:
+
+- Render functionality
+- Content presence
+- Link functionality
+- Navigation elements
+- Responsive behavior
+
+#### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test file
+npm test Header.test.tsx
+
+# Update snapshots
+npm test -- -u
+```
+
+### WordPress Integration
+
+#### Site Structure
+
+- React app served at root (keithratner.live)
+- WordPress multisite at /studio
+- NS Cloner used for site migration
+
+#### Configuration
+
+```apache
+# .htaccess configuration
+RewriteEngine On
+
+# WordPress at /studio
+RewriteCond %{REQUEST_URI} ^/studio/
+RewriteRule ^studio/(.*)$ /studio/index.php [L]
+
+# React app at root
+RewriteCond %{REQUEST_URI} !^/studio/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+```
+
+### Development Workflow
+
+#### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Create production build
+npm run build
+```
+
+#### Testing
+
+```bash
+# Run tests
+npm test
+
+# Check test coverage
+npm test -- --coverage
+```
+
+#### Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to server
+# Copy build files to web root
+# Ensure .htaccess is configured
+```
+
+### Best Practices
+
+1. Component Structure
+
+   - Functional components with TypeScript
+   - Props interface definitions
+   - Clear component responsibilities
+
+2. Styling
+
+   - SCSS modules for component styles
+   - BEM methodology for class names
+   - Responsive design patterns
+
+3. Testing q
+
+   - Component unit tests
    - Integration tests for navigation
-   - QR code functionality verification
+   - Accessibility testing
 
-2. Responsive Testing
-   - Mobile optimization
-   - Cross-browser compatibility
-   - Print media queries
-
-### Deployment
-
-1. GitHub Pages
-
-   - Automated deployment via GitHub Actions
-   - Production build optimization
-
-2. WordPress Integration
-   - Current site moved to /studio
-   - React app served from root
-   - Routing configuration
-
-## Development Workflow
-
-1. Feature Development
-
-   - Create feature branch
-   - Implement and test locally
-   - Submit pull request
-
-2. Code Review Process
-
-   - Automated testing
-   - Manual review
-   - Merge to main branch
-
-3. Deployment Process
-   - Automated build
-   - GitHub Pages deployment
-   - WordPress integration
+4. Code Quality
+   - TypeScript strict mode
+   - ESLint configuration
+   - Prettier formatting

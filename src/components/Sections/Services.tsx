@@ -3,7 +3,7 @@ import type { FC } from "react";
 
 const Services: FC = () => {
 	return (
-		<section id="services" className="services">
+		<section id="services" className="services" data-testid="services-section">
 			<div className="services__container">
 				<h2 className="services__title">Services</h2>
 
