@@ -1,12 +1,10 @@
-// src/components/Sections/Services.tsx
 import type { FC } from "react";
 
 const Services: FC = () => {
 	return (
-		<section id="services" className="services" data-testid="services-section">
+		<section className="services" id="services" data-testid="services-section">
 			<div className="services__container">
 				<h2 className="services__title">Services</h2>
-
 				<div className="services__grid">
 					<div className="services__item">
 						<h3>Print Solutions</h3>
@@ -29,22 +27,22 @@ const Services: FC = () => {
 					</div>
 
 					<div className="services__item">
-						<h3>Technical Expertise</h3>
+						<h3>Mac/PC Support</h3>
 						<ul>
-							<li>Front-end Development</li>
-							<li>Data Management</li>
-							<li>System Integration</li>
-							<li>Workflow Optimization</li>
+							<li>Hardware Diagnostics</li>
+							<li>Software Troubleshooting</li>
+							<li>System Optimization</li>
+							<li>Data Recovery</li>
 						</ul>
 					</div>
 
 					<div className="services__item">
-						<h3>Training & Consulting</h3>
+						<h3>Tech Services</h3>
 						<ul>
-							<li>Adobe Creative Suite</li>
-							<li>Digital Marketing</li>
-							<li>Business Solutions</li>
-							<li>Print Production</li>
+							<li>Network Setup</li>
+							<li>Migration Assistance</li>
+							<li>Security Configuration</li>
+							<li>Remote Support</li>
 						</ul>
 					</div>
 				</div>

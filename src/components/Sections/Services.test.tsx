@@ -14,8 +14,8 @@ describe("Services Component", () => {
 		const categories = [
 			"Print Solutions",
 			"Digital Services",
-			"Technical Expertise",
-			"Training & Consulting",
+			"Mac/PC Support",
+			"Tech Services",
 		];
 
 		for (const category of categories) {
@@ -54,37 +54,37 @@ describe("Services Component", () => {
 		}
 	});
 
-	test("renders technical expertise items", () => {
+	test("renders mac/pc support items", () => {
 		render(<Services />);
-		const technicalItems = [
-			"Front-end Development",
-			"Data Management",
-			"System Integration",
-			"Workflow Optimization",
+		const computerItems = [
+			"Hardware Diagnostics",
+			"Software Troubleshooting",
+			"System Optimization",
+			"Data Recovery",
 		];
 
-		for (const item of technicalItems) {
+		for (const item of computerItems) {
 			const itemElement = screen.getByText(item);
 			expect(itemElement).toBeInTheDocument();
 		}
 	});
 
-	test("renders training & consulting items", () => {
+	test("renders tech services items", () => {
 		render(<Services />);
-		const trainingItems = [
-			"Adobe Creative Suite",
-			"Digital Marketing",
-			"Business Solutions",
-			"Print Production",
+		const techItems = [
+			"Network Setup",
+			"Migration Assistance",
+			"Security Configuration",
+			"Remote Support",
 		];
 
-		for (const item of trainingItems) {
+		for (const item of techItems) {
 			const itemElement = screen.getByText(item);
 			expect(itemElement).toBeInTheDocument();
 		}
 	});
 
-	test("service section has correct id for navigation", () => {
+	test("service section has correct id", () => {
 		render(<Services />);
 		const servicesSection = screen.getByTestId("services-section");
 		expect(servicesSection).toHaveAttribute("id", "services");
