@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/keith-ratner-frontend/static/css/main.b000e38a.css",
-    "main.js": "/keith-ratner-frontend/static/js/main.0658ca83.js",
+    "main.js": "/keith-ratner-frontend/static/js/main.8c30300f.js",
     "index.html": "/keith-ratner-frontend/index.html",
     "main.b000e38a.css.map": "/keith-ratner-frontend/static/css/main.b000e38a.css.map",
-    "main.0658ca83.js.map": "/keith-ratner-frontend/static/js/main.0658ca83.js.map"
+    "main.8c30300f.js.map": "/keith-ratner-frontend/static/js/main.8c30300f.js.map"
   },
   "entrypoints": [
     "static/css/main.b000e38a.css",
-    "static/js/main.0658ca83.js"
+    "static/js/main.8c30300f.js"
   ]
 }
